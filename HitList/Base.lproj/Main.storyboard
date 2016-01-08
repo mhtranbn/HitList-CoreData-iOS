@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3r-Pn-UZQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HitList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m98-7c-yBL">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="PUG-nW-9lK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cfb-33-MXe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="m98-7c-yBL" secondAttribute="trailing" id="6v3-K9-sq3"/>
+                            <constraint firstItem="m98-7c-yBL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7wL-Rk-dMR"/>
+                            <constraint firstItem="m98-7c-yBL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="H2r-0Y-2Xo"/>
+                            <constraint firstItem="m98-7c-yBL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LTn-GY-c1Q"/>
+                            <constraint firstItem="m98-7c-yBL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aDI-cm-WkR"/>
+                            <constraint firstItem="m98-7c-yBL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aRl-l0-KHw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m98-7c-yBL" secondAttribute="bottom" id="hvR-89-y1o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m98-7c-yBL" secondAttribute="bottom" id="ieg-dX-794"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="q6Z-cT-lQX">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="C2y-N1-MiQ">
+                            <connections>
+                                <action selector="addName:" destination="BYZ-38-t0r" id="uqG-kQ-i5n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addName" destination="C2y-N1-MiQ" id="6Yx-G6-2DA"/>
+                        <outlet property="tableView" destination="m98-7c-yBL" id="xvM-Ls-UZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VN0-vY-TXj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t3r-Pn-UZQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="asP-en-96i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ou4-aE-L1B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyz-RL-iJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="311"/>
+        </scene>
+    </scenes>
+</document>
